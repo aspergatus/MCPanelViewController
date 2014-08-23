@@ -389,6 +389,8 @@ const static NSString *MCPanelViewGestureAnimationDirectionKey = @"MCPanelViewGe
         newWidth *= -1;
     }
     newWidth += self.maxWidth;
+    if(newWidth > self.maxWidth+10)
+        newWidth=self.maxWidth+10;
     CGFloat ratio = newWidth / self.maxWidth;
 
     switch (pan.state) {
